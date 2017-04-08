@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 # Use this file to override various settings
--include /vagrant/Makefile.options
+-include Makefile.options
 
 # Set to 'yes' if you want to do speaker ID for trs files
 DO_SPEAKER_ID?=no
@@ -28,7 +28,7 @@ SID_THRESHOLD?=13
 SEGMENTS ?= show.seg
 
 # Where is Kaldi root directory?
-KALDI_ROOT?=~/eesen
+KALDI_ROOT?=~/scribie/utils/eesen
 
 GRAPH_DIR?=$(EESEN_ROOT)/asr_egs/tedlium/v1/data/lang_phn_test
 MODEL_DIR?=$(EESEN_ROOT)/asr_egs/tedlium/v1/exp/train_phn_l5_c320

@@ -17,6 +17,8 @@
 BASEDIR=$(dirname $0)
 EESEN_ROOT=~/eesen
 
+. $BASEDIR/path.sh || exit 1;
+
 # Change these if you're using different models 
 GRAPH_DIR=$EESEN_ROOT/asr_egs/tedlium/v2-30ms/data/lang_phn_test_test_newlm
 MODEL_DIR=$EESEN_ROOT/asr_egs/tedlium/v2-30ms/exp/train_phn_l5_c320_v1s
@@ -25,7 +27,6 @@ MODEL_DIR=$EESEN_ROOT/asr_egs/tedlium/v2-30ms/exp/train_phn_l5_c320_v1s
 frame_shift=0.03  # 30 ms frames
 lm_weight=0.8     # same as best setting for 30ms eesen tedlium transcriber
 
-. path.sh
 . $BASEDIR/utils/parse_options.sh
 
 filename=$(basename "$1")

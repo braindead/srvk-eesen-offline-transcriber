@@ -13,6 +13,7 @@ clean=false
 nthreads=""
 nnet2_online=false
 
+. $BASEDIR/path.sh || exit 1;
 . $BASEDIR/utils/parse_options.sh || exit 1;
 
 if [ $# -ne 1 ]; then
