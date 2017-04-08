@@ -1,5 +1,4 @@
 *.mp3
 utils
 steps
-Makefile.options
 build/*
